@@ -12,20 +12,17 @@ const ContactDetails = ({
   deleteContact,
   history: { push },
 }) => {
-  const [contactDetails, setContactDetails] = useState(undefined);
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   const dispatch = useDispatch();
   useEffect(() => {
     getSingleContact(id);
   }, []);
-  useEffect(() => {
-    setContactDetails(cDetails);
-  }, [cDetails]);
+
   useEffect(() => {
     switch (ccResponse.status) {
       case 'success':
         toast.success('Contact Deleted successfully');
-        // dispatch({ type: 'C_M_RESET' });
+        dispatch({ type: 'C_C_RESET' });
         push('/contacts');
         break;
       default:
@@ -58,7 +55,7 @@ const ContactDetails = ({
                 </small>
               </div>
               <div>
-                <h5 className="mt-3">{`${cDetails.contact.first_name} ${cDetails.contact.last_name}`}</h5>
+                <h5 className="mt-3">{`${cDetails.first_name} ${cDetails.last_name}`}</h5>
               </div>
             </div>
           </div>
@@ -67,7 +64,7 @@ const ContactDetails = ({
               <i className="icon-phone"></i>
             </div>
             <div className="d-flex flex-column c-i-a-input-content">
-              { JSON.parse(cDetails.contact.phonenumbers).map(({ phonenumber, category }) => (
+              { JSON.parse(cDetails.phonenumbers).map(({ phonenumber, category }) => (
                 <div className="cphone">
                   <div>
                     <span>{phonenumber}</span>
@@ -84,7 +81,7 @@ const ContactDetails = ({
               <i className="ti-email"></i>
             </div>
             <div className="d-flex flex-column c-i-a-input-content">
-              { JSON.parse(cDetails.contact.emails).map(({ email, category }) => (
+              { JSON.parse(cDetails.emails).map(({ email, category }) => (
                 <div className="cphone">
                   <div>
                     <span>{email}</span>

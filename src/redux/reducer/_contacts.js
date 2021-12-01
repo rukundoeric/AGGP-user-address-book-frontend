@@ -48,7 +48,7 @@ export default (state = initialState, action) => {
     case "C_C_RESET":
       return {
         ...state,
-        cmResponse: {},
+        ccResponse: {},
       };
     default:
       return state;

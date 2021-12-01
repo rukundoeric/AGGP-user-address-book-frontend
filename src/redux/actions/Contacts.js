@@ -50,7 +50,7 @@ export const getSingleContact = (id) => async dispach => {
     const { data } = await request('get', contact(id));
     dispach({
       type: 'GET_CONTACT',
-      payload: data,
+      payload: data.contact,
       status: 'success',
     });
   } catch (error) {

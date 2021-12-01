@@ -22,7 +22,7 @@ const NewContact = ({
       case 'success':
         progressBar.current.classList.add('hidden');
         toast.success('New contact added successfully');
-        dispatch({ type: 'C_M_RESET' });
+        dispatch({ type: 'C_C_RESET' });
         push('/contacts');
         break;
       default:
