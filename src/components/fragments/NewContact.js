@@ -39,7 +39,7 @@ const NewContact = ({
       setEmails(newEmails)
     } else {
       let phone = {
-        phonenumber: data.currentTextValue,
+        phone: data.currentTextValue,
         category: data.setCurrentSelectValue
       }
       let newPhoneNumbers = [...phonenumbers, phone]
@@ -51,7 +51,7 @@ const NewContact = ({
     const contact = {
       first_name,
       last_name,
-      phonenumbers: JSON.stringify(phonenumbers),
+      phones: JSON.stringify(phonenumbers),
       emails: JSON.stringify(emails)
     }
     createContact(contact)
