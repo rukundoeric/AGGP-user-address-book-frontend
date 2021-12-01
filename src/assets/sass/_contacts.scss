@@ -1,0 +1,118 @@
+.contact-list {
+  background-color: #f3f3f3;
+  max-height: calc(100vh - 110px);
+  overflow-y: scroll;
+
+
+  .info-d {
+    color: rgb(155, 155, 155);
+  }
+
+  .value {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(66, 66, 66);
+  }
+
+  .m-item {
+    background-color: $color_white;
+    border-bottom: 1px solid #f3f3f3;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ececec;
+    }
+  }
+}
+
+.new-contact {
+  max-height: calc(100vh - 110px);
+  overflow-y: scroll;
+}
+
+.header-c-c {
+  width: 100%;
+  height: 200px;
+
+  .profile_icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.form-content {
+
+  .contact-info-add-item {
+    width: 100%;
+    .c-i-a-content{
+      width: 100%;
+      .c-i-a-input-content{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.icon-content{
+  width: 40px;
+}
+
+.btn-add {
+  background-color: $color_accent_1;
+  border: none;
+  padding: 3px 15px 3px 15px;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-delete{
+  background-color: rgb(160, 72, 72);
+  border: none;
+  padding: 3px 15px 3px 15px;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-create {
+  background-color: $btns_color;
+  border: none;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  color: white;
+}
+
+.txts-select {
+  outline: none;
+  flex-grow: 1;
+  height: 40px;
+  padding-left: 10px;
+  color: rgb(112, 112, 112);
+  font-size: small;
+  width: 200px;
+  border: 0;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.cphone {
+  span {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #616161;
+  }
+
+  small {
+    font-size: 12px;
+    color: #9d9d9d;
+  }
+}
+
+.header-c-c-d {
+  background-color: $color_accent_1_a;
+  width: 100%;
+  height: 230px;
+
+  .profile_icon {
+    width: 100px;
+    height: 100px;
+  }
+}

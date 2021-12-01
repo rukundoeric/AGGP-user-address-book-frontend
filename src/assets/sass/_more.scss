@@ -1,0 +1,87 @@
+.more-container {
+  background-color: #f3f3f3;
+  height: 100%;
+
+  .section-1 {
+    background-color: $color_white;
+
+    .profile-pic {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 2px solid $color_accent_1;
+    }
+
+    .email {
+      color: $color_accent_1;
+    }
+  }
+
+  .section-2 {
+    .option-item {
+      border-bottom: 1px solid #e1e3e7;
+    }
+
+    a {
+      color: rgb(143, 143, 143);
+    }
+  }
+}
+
+.things-to-measure {
+  background-color: #f3f3f3;
+  height: 100%;
+
+  .ttm-item {
+    background-color: $color_white;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    span {
+      &:nth-of-type(1) {
+        color: rgb(131, 131, 131);
+      }
+    }
+
+    small {
+      &:nth-of-type(1) {
+        color: rgb(201, 201, 201);
+      }
+
+      &:nth-of-type(2) {
+        color: rgb(131, 131, 131);
+      }
+    }
+  }
+}
+
+.btn-create {
+  background-color: $btns_color;
+  border: none;
+  padding: 8px 30px 10px 30px;
+  border-radius: 5px;
+  color: white;
+  float: right;
+}
+
+.btn-create:hover {
+  color: white;
+  background-color: $color_primary_light;
+}
+
+.help-container {
+  background-color: #f3f3f3;
+  height: 100%;
+
+  p {
+    font-size: 15px;
+    color: rgb(85, 85, 85);
+
+    i {
+      color: $color_accent_1;
+    }
+  }
+}
