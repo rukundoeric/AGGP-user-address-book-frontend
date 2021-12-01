@@ -1,0 +1,405 @@
+a {
+  font-weight: 500;
+}
+
+.setMaxWidth {
+  max-width: 350px;
+}
+
+.screenHeight {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.autoMargin {
+  margin: 0 auto;
+}
+
+.mar-left {
+  margin-left: 10px;
+}
+
+.mar-right {
+  margin-right: 10px;
+}
+
+.mar-top {
+  margin-top: 10px;
+}
+
+.mar-bottom {
+  margin-bottom: 10px;
+}
+
+.mar-all {
+  margin: 10px;
+}
+
+.mar-no {
+  margin: 0;
+}
+
+.pad-left {
+  padding-left: 10px;
+}
+
+.pad-right {
+  padding-right: 10px;
+}
+
+.pad-top {
+  padding-top: 10px;
+}
+
+.pad-bottom {
+  padding-bottom: 10px;
+}
+
+.pad-all {
+  padding: 10px;
+}
+
+.pad-no {
+  padding: 0;
+}
+
+.inner-container {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(226, 226, 226);
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @media (max-width: 482px) {
+    width: 100%;
+  }
+}
+
+.inner-container::-webkit-scrollbar {
+  width: 3px;
+}
+
+.inner-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(233, 233, 233, 0.3);
+  border-radius: 0;
+}
+
+.inner-container::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: $color_accent_1;
+}
+
+.forget-password {
+  color: rgb(189, 189, 189);
+
+  span,
+  a {
+    color: lighten($color_accent_1, 20%);
+  }
+
+  a {
+    font-weight: 700;
+  }
+}
+
+#formContainer {
+  width: 100%;
+  position: relative;
+  padding: 10px 40px;
+}
+
+.input-fields-div {
+  width: 90%;
+}
+
+.logoImage {
+  display: block;
+  margin: 10px auto;
+  max-height: 60px;
+  border-radius: 20px;
+}
+
+.clearfix {
+  width: 100%;
+  clear: both;
+}
+
+.login-container {
+  margin: 0;
+  padding: 0;
+  background-color: $color_accent_1_a;
+}
+
+.btn_container {
+  justify-content: right;
+  align-items: flex-end;
+  display: inline-block;
+  max-width: inherit;
+  border: none;
+  padding: 0 0 0 0;
+}
+
+.border-1 {
+  border: 1px solid $border_gray_light;
+  border-radius: 5px;
+}
+
+.border-2 {
+  border: 1px solid $border_gray_light;
+  border-radius: 5px 0 0 5px;
+}
+
+.prepend-style {
+  border-radius: 0 5px 5px 0;
+  background-color: rgb(245, 245, 245);
+  border-left-width: 0;
+
+  span {
+    color: rgb(155, 155, 155);
+  }
+
+  i {
+    color: rgb(155, 155, 155);
+  }
+}
+
+.txts-inputs {
+  outline: none;
+  flex-grow: 1;
+  height: 40px;
+  padding-left: 10px;
+  color: rgb(112, 112, 112);
+  font-size: small;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.input-group-prepend {
+  .input-group-text {
+    height: 40px;
+  }
+}
+
+.errorresponse {
+  border: 0.5px solid $error_response;
+  color: $error_response;
+}
+
+#link {
+  margin-top: 20px;
+  color: $border_gray_light;
+  float: right;
+  font-size: 13px;
+}
+
+.error {
+  color: white;
+  font-size: 13px;
+}
+
+.login-container .input-inline-field .input-field > label:not(.label-icon).active {
+  left: 20px;
+}
+
+.login-container .input-field > label {
+  width: 98%;
+  text-indent: 10px;
+}
+
+.login-container .scale-transition.scale-out {
+  height: 0;
+  margin: 0;
+}
+
+.login-container .input-field {
+  margin-bottom: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.btn-login {
+  background-color: $color_accent_1;
+  border: none;
+  padding: 8px 30px 10px 30px;
+  border-radius: 5px;
+  color: white;
+  float: right;
+}
+
+.btn-login:hover {
+  color: white;
+  background-color: $color_primary_light;
+}
+
+.progress-bar {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  background-color: lighten($color_accent_1, 45%);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  background-color: lighten($color_accent_1, 30%);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress .determinate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: lighten($color_accent_1, 30%);
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+
+.progress .indeterminate {
+  background-color: lighten($color_accent_1, 10%);
+}
+
+.error-container {
+  border-radius: 10px;
+  background-color: rgba(255, 172, 172, 0.719);
+  padding: 15px;
+
+  .error {
+    flex-grow: 1;
+  }
+
+  i {
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+}
+
+.progress .indeterminate::before {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left, right;
+  -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+  animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+.progress .indeterminate::after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left, right;
+  -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  -webkit-animation-delay: 1.15s;
+  animation-delay: 1.15s;
+}
+
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+
+@-webkit-keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes zeroLeft {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes zeroLeft {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}

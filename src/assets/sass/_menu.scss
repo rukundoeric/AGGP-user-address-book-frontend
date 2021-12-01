@@ -1,0 +1,46 @@
+.menu_bar {
+  min-height: 60px;
+  // position: fixed;
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    width: 350px;
+    border-right: 2px solid $primary_color;
+  }
+
+  @media (max-width: 992px) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  
+
+  .nav-item {
+    height: 60px;
+
+    i,
+    small {
+      color: $text_color_1;
+    }
+
+    small {
+      font-size: 10px;
+    }
+
+    @media (min-width: 1024px) {
+      small {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .nav-item.active {
+    background-color: $color_accent_1;
+
+    i,
+    small {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$color_accent_1:#67ABEB;
+$menu_color: #323943;
+$btns_color: #97e493;
+$color_text_color:rgb(80, 80, 80);
+$color_primary: #021422;
+$primary_color: $color_accent_1;
+$color_primary_1: #021422ee;
+$color_primary_2: #021e2ea7;
+$color_primary_light:#9cd1ff;
+$color_accent_2:#3276d6;
+$color_white: #fdfdfd;
+$white: #fff;
+$error_response:rgba(252, 117, 117, 0.555);
+$border_gray_light:rgb(230, 230, 230);
+$color_accent_1_a: lighten($color_accent_2, 45%);
+
+$table_color_bg: white;
+$border_color: #e3e3e3;
+$text_color_1: #a7a7a7;
+$sub_menu_color: rgb(253, 253, 253);
+$left_nav_text_color: #6c6c6c;
+$left_nav_hover: rgba(243, 243, 243, 0.253);
+
+$white_color: white;
+$bg_gray_color: #fcfcfc;
+$bg_white_color: white;
+$color_gray: rgb(143, 143, 143);
+
+$nav_menu_icon_color: rgb(155, 155, 155);
+$nav_item_icon_color_filter: invert(52%) sepia(79%) saturate(2504%) hue-rotate(159deg) brightness(91%) contrast(101%);
+$nav_item_icon_color_filter_active: invert(100%) sepia(100%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
