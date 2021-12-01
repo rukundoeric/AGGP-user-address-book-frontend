@@ -1,4 +1,4 @@
-const API = 'https://address-book-b.herokuapp.com/';
+const API = 'https://address-book-b.herokuapp.com';
 
 // For Users
 export const login = `${API}/auth`;
