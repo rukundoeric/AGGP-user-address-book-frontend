@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { getSingleContact, deleteContact } from "../../redux/actions/Contacts";
 import { connect, useDispatch } from "react-redux";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const ContactDetails = ({
   contacts: { cDetails, ccResponse },
@@ -12,18 +12,22 @@ const ContactDetails = ({
   deleteContact,
   history: { push },
 }) => {
+  const [contactDetails, setContactDetails] = useState(undefined);
+
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   const dispatch = useDispatch();
   useEffect(() => {
     getSingleContact(id);
   }, []);
-
+  useEffect(() => {
+    setContactDetails(cDetails);
+  }, [cDetails]);
   useEffect(() => {
     switch (ccResponse.status) {
-      case 'success':
-        toast.success('Contact Deleted successfully');
-        dispatch({ type: 'C_C_RESET' });
-        push('/contacts');
+      case "success":
+        toast.success("Contact Deleted successfully");
+        dispatch({ type: "C_C_RESET" });
+        push("/contacts");
         break;
       default:
     }
@@ -31,7 +35,7 @@ const ContactDetails = ({
 
   const handleDeleteContact = () => {
     deleteContact(id);
-  }
+  };
   return (
     <div className="contact-details d-flex flex-column">
       {!cDetails && (
@@ -64,16 +68,17 @@ const ContactDetails = ({
               <i className="icon-phone"></i>
             </div>
             <div className="d-flex flex-column c-i-a-input-content">
-              { JSON.parse(cDetails.phonenumbers).map(({ phonenumber, category }) => (
-                <div className="cphone">
-                  <div>
-                    <span>{phonenumber}</span>
+              {cDetails.phones &&
+                cDetails.phones.map(({ phone, category }) => (
+                  <div className="cphone">
+                    <div>
+                      <span>{phone}</span>
+                    </div>
+                    <div>
+                      <small>{category}</small>
+                    </div>
                   </div>
-                  <div>
-                    <small>{category}</small>
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
           <div className="d-flex flex-grow-1 c-i-a-content p-4">
@@ -81,22 +86,25 @@ const ContactDetails = ({
               <i className="ti-email"></i>
             </div>
             <div className="d-flex flex-column c-i-a-input-content">
-              { JSON.parse(cDetails.emails).map(({ email, category }) => (
-                <div className="cphone">
-                  <div>
-                    <span>{email}</span>
+              {cDetails.emails &&
+                cDetails.emails.map(({ email, category }) => (
+                  <div className="cphone">
+                    <div>
+                      <span>{email}</span>
+                    </div>
+                    <div>
+                      <small>{category}</small>
+                    </div>
                   </div>
-                  <div>
-                    <small>{category}</small>
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </div>
       )}
       <div className="d-flex justify-content-center align-items-center">
-        <button className="btn-delete" onClick={handleDeleteContact}>Delete</button>
+        <button className="btn-delete" onClick={handleDeleteContact}>
+          Delete
+        </button>
       </div>
     </div>
   );
@@ -106,5 +114,5 @@ const mapStateToProps = (state) => state;
 
 export default connect(mapStateToProps, {
   getSingleContact,
-  deleteContact
+  deleteContact,
 })(ContactDetails);

@@ -23,10 +23,10 @@ export default function ContactInfoAdd({
           <i className={icon}></i>
         </div>
         <div className="d-flex flex-column c-i-a-input-content">
-          {data.map(({ phonenumber, category, email }) => (
+          {data.map(({ phone, category, email }) => (
             <div className="cphone">
               <div>
-                <span>{title === "Email" ? email : phonenumber}</span>
+                <span>{title === "Email" ? email : phone}</span>
               </div>
               <div>
                 <small>{category}</small>
